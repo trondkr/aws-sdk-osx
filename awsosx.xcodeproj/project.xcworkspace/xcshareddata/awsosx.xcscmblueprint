@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E4118CA236FE7D0E95AB92C5803EC71263B6B3CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EA4CBD2BDE261C3701DE836FCD273D2353F7746F" : 9223372036854775807,
+    "E4118CA236FE7D0E95AB92C5803EC71263B6B3CC" : 9223372036854775807,
+    "0C1B232674BA8AEB4868841AD35FDFD540C01718" : 0,
+    "A6F31325ECA45C8F7B1862BAFE22DDB43FDDC639" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8839EB6D-D804-4B67-8D85-CE9F1DBA0655",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EA4CBD2BDE261C3701DE836FCD273D2353F7746F" : "aws-sdk-macos\/",
+    "E4118CA236FE7D0E95AB92C5803EC71263B6B3CC" : "aws-sdk-macos-TA\/",
+    "0C1B232674BA8AEB4868841AD35FDFD540C01718" : "aws-sdk-osx-v2",
+    "A6F31325ECA45C8F7B1862BAFE22DDB43FDDC639" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "awsosx",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "awsosx.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/trondk\/awsosxsdkv2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C1B232674BA8AEB4868841AD35FDFD540C01718"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/trondkr\/ferrybox-DHI-comparison.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A6F31325ECA45C8F7B1862BAFE22DDB43FDDC639"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/trondkr\/aws-sdk-macos-TA.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E4118CA236FE7D0E95AB92C5803EC71263B6B3CC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/trondkr\/awsosx.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA4CBD2BDE261C3701DE836FCD273D2353F7746F"
+    }
+  ]
+}
