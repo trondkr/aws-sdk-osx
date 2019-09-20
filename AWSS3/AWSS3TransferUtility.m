@@ -16,12 +16,12 @@
 #import "AWSS3TransferUtility.h"
 #import "AWSS3PreSignedURL.h"
 #import "AWSS3Service.h"
-#import "AWSXMLDictionary.h"
 #import "AWSS3TransferUtilityDatabaseHelper.h"
 #import "AWSS3TransferUtilityTasks.h"
-
+#import "AWSXMLDictionary.h"
 #import "AWSFMDB.h"
 #import "AWSSynchronizedMutableDictionary.h"
+
 
 #include <stdio.h>
 
@@ -260,8 +260,11 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
         AWSServiceInfo *serviceInfo = [[AWSInfo defaultAWSInfo] defaultServiceInfo:AWSInfoS3TransferUtility];
        
         if (serviceInfo) {
+            NSNumber *localTestingEnabled = [serviceInfo.infoDictionary valueForKey:@"DangerouslyConnectToHTTPEndpointForTesting"];
             serviceConfiguration = [[AWSServiceConfiguration alloc] initWithRegion:serviceInfo.region
-                                                               credentialsProvider:serviceInfo.cognitoCredentialsProvider];
+                                                                       serviceType:AWSServiceS3
+                                                               credentialsProvider:serviceInfo.cognitoCredentialsProvider
+                                                               localTestingEnabled:[localTestingEnabled boolValue]];
             NSNumber *accelerateModeEnabled = [serviceInfo.infoDictionary valueForKey:@"AccelerateModeEnabled"];
             NSString *bucketName = [serviceInfo.infoDictionary valueForKey:@"Bucket"];
             transferUtilityConfiguration.bucket = bucketName;
@@ -1066,7 +1069,7 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
         for (NSString *key in transferUtilityUploadTask.expression.requestHeaders) {
             [request setValue: transferUtilityUploadTask.expression.requestHeaders[key] forHTTPHeaderField:key];
         }
-        AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
+       // AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
         
         NSURLSessionUploadTask *uploadTask = [self.session uploadTaskWithRequest:request
                                                                         fromFile:[NSURL fileURLWithPath:transferUtilityUploadTask.file]];
@@ -1485,8 +1488,13 @@ internalDictionaryToAddSubTaskTo: (NSMutableDictionary *) internalDictionaryToAd
                       URLRequest:nil];
     
     [transferUtilityMultiPartUploadTask.expression assignRequestParameters:request];
-   
-    [[[self.preSignedURLBuilder getPreSignedURL:request] continueWithSuccessBlock:^id(AWSTask *task) {
+
+    [[[self.preSignedURLBuilder getPreSignedURL:request] continueWithBlock:^id(AWSTask *task) {
+        error = task.error;
+        if ( error ) {
+            return nil;
+        }
+
         NSURL *presignedURL = task.result;
         NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:presignedURL];
          urlRequest.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
@@ -1704,7 +1712,7 @@ internalDictionaryToAddSubTaskTo: (NSMutableDictionary *) internalDictionaryToAd
             [request setValue:transferUtilityDownloadTask.expression.requestHeaders[key] forHTTPHeaderField:key];
         }
         
-        AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
+      //  AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
         
         NSURLSessionDownloadTask *downloadTask = [self.session downloadTaskWithRequest:request];
         transferUtilityDownloadTask.sessionTask = downloadTask;
@@ -2001,10 +2009,10 @@ completionHandler:(void (^)(void))completionHandler {
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error {
-    AWSDDLogDebug(@"Thread:%@: didCompleteWithError called for task %lu", [NSThread currentThread], (unsigned long)task.taskIdentifier);
+    AWSDDLogDebug(@"Thread:%@: didCompleteWithError %@ called for task %lu", [NSThread currentThread],error.localizedDescription, (unsigned long)task.taskIdentifier);
     NSHTTPURLResponse *HTTPResponse = nil;
     NSMutableDictionary *userInfo = nil;
-    
+   
     if (!error) {
         if (![task.response isKindOfClass:[NSHTTPURLResponse class]]) {
             error = [NSError errorWithDomain:AWSS3TransferUtilityErrorDomain code:AWSS3TransferUtilityErrorUnknown userInfo:nil];
@@ -2054,9 +2062,10 @@ didCompleteWithError:(NSError *)error {
             }
             
             uploadTask.error = error;
+            NSLog(@"UPLOAD ERRRO %@",error);
             if (error && HTTPResponse) {
                 if ([self isErrorRetriable:HTTPResponse.statusCode responseFromServer:uploadTask.responseData] )  {
-                    AWSDDLogDebug(@"Received a 500, 503 or 400 error. Response Data is [%@]", uploadTask.responseData );
+                    AWSDDLogDebug(@"Received a 500, 503 or 400 error. Response Data is [%@] HTTPResponse %@", uploadTask.responseData, HTTPResponse );
                     if (uploadTask.retryCount < self.transferUtilityConfiguration.retryLimit) {
                         AWSDDLogDebug(@"Retry count is below limit and error is retriable. ");
                         [self retryUpload:uploadTask];
@@ -2356,7 +2365,7 @@ didCompleteWithError:(NSError *)error {
    didSendBodyData:(int64_t)bytesSent
     totalBytesSent:(int64_t)totalBytesSent
 totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
-    AWSDDLogVerbose(@"didSendBodyData called for task %lu", (unsigned long)task.taskIdentifier);
+ //   AWSDDLogVerbose(@"didSendBodyData called for task %lu", (unsigned long)task.taskIdentifier);
     //Check if the task is an uploadTask.
     if (![task isKindOfClass:[NSURLSessionUploadTask class]]) {
         return;
@@ -2537,7 +2546,7 @@ didFinishDownloadingToURL:(NSURL *)location {
       didWriteData:(int64_t)bytesWritten
  totalBytesWritten:(int64_t)totalBytesWritten
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
-    AWSDDLogDebug(@"didWriteData called for download task %lu", (unsigned long)downloadTask.taskIdentifier);
+ //   AWSDDLogDebug(@"didWriteData called for download task %lu", (unsigned long)downloadTask.taskIdentifier);
     AWSS3TransferUtilityDownloadTask *transferUtilityDownloadTask =
         [self.taskDictionary objectForKey:@(downloadTask.taskIdentifier)];
    

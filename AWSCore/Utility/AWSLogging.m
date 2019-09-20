@@ -13,7 +13,7 @@
 // permissions and limitations under the License.
 //
 
-#import "AWSLogging.h"
+
 #import "AWSService.h"
 
 #pragma clang diagnostic push

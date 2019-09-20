@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AWSCore/Authentication/AWSCredentialsProvider.m"
-            timestampString = "550653835.208251"
+            timestampString = "590705629.245592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "727"
-            endingLineNumber = "727"
+            startingLineNumber = "729"
+            endingLineNumber = "729"
             landmarkName = "-setInternalCredentials:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AWSCore/Service/AWSService.m"
-            timestampString = "584638143.728835"
+            timestampString = "590710259.967862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "569"
-            endingLineNumber = "569"
-            landmarkName = "-URLWithRegion:regionName:service:serviceName:useUnsafeURL:"
+            startingLineNumber = "587"
+            endingLineNumber = "587"
+            landmarkName = "-localTestingURLForService:port:useUnsafeURL:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

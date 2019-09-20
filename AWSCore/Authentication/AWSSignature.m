@@ -398,11 +398,12 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
                            endpoint.regionName,
                            endpoint.serviceName,
                            AWSSignatureV4Terminator];
-        
+       
         NSString *signingCredentials = [NSString stringWithFormat:@"%@/%@",credentials.accessKey, scope];
         //need to replace "/" with "%2F"
         NSString *xAmzCredentialString = [signingCredentials stringByReplacingOccurrencesOfString:@"/" withString:@"\%2F"];
-        
+        NSLog(@"SCOPE %@",scope);
+        NSLog(@"xAmzCredentialString %@",xAmzCredentialString);
         [queryString appendFormat:@"%@=%@&",@"X-Amz-Credential",xAmzCredentialString];
         
         //X-Amz-Date in ISO 8601 format, for example, 20130721T201207Z. This value must match the date value used to calculate the signature.
@@ -499,8 +500,8 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
         // ============  generate v4 signature string (END) ===================
         
         [queryString appendFormat:@"%@=%@", @"X-Amz-Signature", signatureString];
-        
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@/%@?%@", endpoint.URL.scheme, endpoint.hostName, keyPath, queryString];
+        NSString *portNumber = endpoint.portNumber != nil ? [NSString stringWithFormat:@":%@", endpoint.portNumber.stringValue]: @"";
+        NSString *urlString = [NSString stringWithFormat:@"%@://%@%@/%@?%@", endpoint.URL.scheme, endpoint.hostName, portNumber, keyPath, queryString];
         
         return [NSURL URLWithString:urlString];
     }];

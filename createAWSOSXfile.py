@@ -7,7 +7,7 @@ import os
 
 # NOTE!
 # Does not work unless you delete the build folder in the aws-sdk-macos directory!!!!!
-for root, dirs, files in os.walk("/Users/trondkr/Dropbox/Projects/Syncsolution/aws-sdk-macos"):
+for root, dirs, files in os.walk("/Users/trondkr/Dropbox/Projects/Syncsolution/aws-sdk-osx"):
     
     for file in files:
         if file.endswith(".h"):

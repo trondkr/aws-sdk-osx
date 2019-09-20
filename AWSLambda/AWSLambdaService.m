@@ -14,7 +14,6 @@
 //
 
 #import "AWSLambdaService.h"
-#import "AWSNetworking.h"
 #import "AWSCategory.h"
 #import "AWSNetworking.h"
 #import "AWSCocoaLumberjack.h"
@@ -27,7 +26,7 @@
 #import "AWSLambdaRequestRetryHandler.h"
 
 static NSString *const AWSInfoLambda = @"Lambda";
-NSString *const AWSLambdaSDKVersion = @"2.9.4";
+NSString *const AWSLambdaSDKVersion = @"2.11.1";
 
 
 @interface AWSLambdaResponseSerializer : AWSJSONResponseSerializer
@@ -683,6 +682,29 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 - (void)getLayerVersion:(AWSLambdaGetLayerVersionRequest *)request
      completionHandler:(void (^)(AWSLambdaGetLayerVersionResponse *response, NSError *error))completionHandler {
     [[self getLayerVersion:request] continueWithBlock:^id _Nullable(AWSTask<AWSLambdaGetLayerVersionResponse *> * _Nonnull task) {
+        AWSLambdaGetLayerVersionResponse *result = task.result;
+        NSError *error = task.error;
+
+        if (completionHandler) {
+            completionHandler(result, error);
+        }
+
+        return nil;
+    }];
+}
+
+- (AWSTask<AWSLambdaGetLayerVersionResponse *> *)getLayerVersionByArn:(AWSLambdaGetLayerVersionByArnRequest *)request {
+    return [self invokeRequest:request
+                    HTTPMethod:AWSHTTPMethodGET
+                     URLString:@"/2018-10-31/layers?find=LayerVersion"
+                  targetPrefix:@""
+                 operationName:@"GetLayerVersionByArn"
+                   outputClass:[AWSLambdaGetLayerVersionResponse class]];
+}
+
+- (void)getLayerVersionByArn:(AWSLambdaGetLayerVersionByArnRequest *)request
+     completionHandler:(void (^)(AWSLambdaGetLayerVersionResponse *response, NSError *error))completionHandler {
+    [[self getLayerVersionByArn:request] continueWithBlock:^id _Nullable(AWSTask<AWSLambdaGetLayerVersionResponse *> * _Nonnull task) {
         AWSLambdaGetLayerVersionResponse *result = task.result;
         NSError *error = task.error;
 

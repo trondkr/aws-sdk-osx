@@ -14,7 +14,6 @@
 //
 
 #import "AWSDynamoDBService.h"
-#import "AWSNetworking.h"
 #import "AWSCategory.h"
 #import "AWSNetworking.h"
 #import "AWSCocoaLumberjack.h"
@@ -27,7 +26,7 @@
 #import "AWSDynamoDBRequestRetryHandler.h"
 
 static NSString *const AWSInfoDynamoDB = @"DynamoDB";
-NSString *const AWSDynamoDBSDKVersion = @"2.9.4";
+NSString *const AWSDynamoDBSDKVersion = @"2.11.1";
 
 
 @interface AWSDynamoDBResponseSerializer : AWSJSONResponseSerializer

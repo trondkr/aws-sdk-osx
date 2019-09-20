@@ -57,6 +57,8 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
         _secretKey = secretKey;
         _sessionKey = sessionKey;
         _expiration = expiration;
+        NSLog(@"internalCredentials.accessKey; %@ internalCredentials.secretKey; %@",accessKey,secretKey);
+        
     }
 
     return self;
@@ -96,7 +98,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 }
 
 - (void)invalidateCachedTemporaryCredentials {
-    // No-op
+    self.internalCredentials = nil;
 }
 
 @end

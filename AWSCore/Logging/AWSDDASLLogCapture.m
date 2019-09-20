@@ -13,7 +13,7 @@
 //   to endorse or promote products derived from this software without specific
 //   prior written permission of Deusty, LLC.
 
-#import "AWSDDASLLogCapture.h"
+
 
 // Disable legacy macros
 #ifndef AWSDD_LEGACY_MACROS

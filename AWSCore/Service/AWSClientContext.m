@@ -87,8 +87,6 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
         _deviceModelVersion=@"macOS";
         _deviceLocale=@"macOS";
 #endif
-
-
         _customAttributes = @{};
         _serviceDetails = [NSMutableDictionary new];
     }

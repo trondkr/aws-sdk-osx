@@ -18,6 +18,7 @@
 		EF00659A204D6808007DD879 /* AWSDynamoDBModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EF00658E204D6806007DD879 /* AWSDynamoDBModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF00659B204D6808007DD879 /* AWSDynamoDBObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF00658F204D6807007DD879 /* AWSDynamoDBObjectMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF00659C204D6808007DD879 /* AWSDynamoDBService.h in Headers */ = {isa = PBXBuildFile; fileRef = EF006590204D6807007DD879 /* AWSDynamoDBService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF1A295922E4109D006F08F9 /* updateAWSFromRespoitory.py in Resources */ = {isa = PBXBuildFile; fileRef = EF1A295822E4109D006F08F9 /* updateAWSFromRespoitory.py */; };
 		EF1CF3451B7BD98800253C2B /* awsosx.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF3441B7BD98800253C2B /* awsosx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF47B1B7BD9D900253C2B /* AWSCredentialsProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF3711B7BD9D900253C2B /* AWSCredentialsProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF47C1B7BD9D900253C2B /* AWSCredentialsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CF3721B7BD9D900253C2B /* AWSCredentialsProvider.m */; };
@@ -266,6 +267,7 @@
 		EF00658E204D6806007DD879 /* AWSDynamoDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBModel.h; path = AWSDynamoDB/AWSDynamoDBModel.h; sourceTree = "<group>"; };
 		EF00658F204D6807007DD879 /* AWSDynamoDBObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBObjectMapper.h; path = AWSDynamoDB/AWSDynamoDBObjectMapper.h; sourceTree = "<group>"; };
 		EF006590204D6807007DD879 /* AWSDynamoDBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBService.h; path = AWSDynamoDB/AWSDynamoDBService.h; sourceTree = "<group>"; };
+		EF1A295822E4109D006F08F9 /* updateAWSFromRespoitory.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = updateAWSFromRespoitory.py; sourceTree = "<group>"; };
 		EF1CF33F1B7BD98800253C2B /* awsosx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = awsosx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1CF3431B7BD98800253C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1CF3441B7BD98800253C2B /* awsosx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = awsosx.h; sourceTree = "<group>"; };
@@ -439,7 +441,6 @@
 		EF59B95D20D844E400BEE4B6 /* AWSDDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSDDContextFilterLogFormatter.m; path = AWSCore/Logging/Extensions/AWSDDContextFilterLogFormatter.m; sourceTree = SOURCE_ROOT; };
 		EF59B95E20D844E400BEE4B6 /* AWSDDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDDContextFilterLogFormatter.h; path = AWSCore/Logging/Extensions/AWSDDContextFilterLogFormatter.h; sourceTree = SOURCE_ROOT; };
 		EF5A8EB321825D8500836B6E /* CocoaLumberjack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CocoaLumberjack.swift; path = "AWSCore/New Group/CocoaLumberjack.swift"; sourceTree = SOURCE_ROOT; };
-		EF5FDA9C22CEF14400594E7A /* updateAWSFromRespoitory.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; name = updateAWSFromRespoitory.py; path = ../updateAWSFromRespoitory.py; sourceTree = "<group>"; };
 		EF5FDA9D22CEF2A700594E7A /* CocoaLumberjack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjack.swift; sourceTree = "<group>"; };
 		EF628335225EA14C00BA29E8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EF628337225EA15700BA29E8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -555,7 +556,7 @@
 				EFEFAB9021122A7900E5D0F9 /* AWSLambda */,
 				EF006584204D67F0007DD879 /* AWSDynamoDB */,
 				EF5977221FA6566800380487 /* createAWSOSXfile.py */,
-				EF5FDA9C22CEF14400594E7A /* updateAWSFromRespoitory.py */,
+				EF1A295822E4109D006F08F9 /* updateAWSFromRespoitory.py */,
 				EF5977111FA6521E00380487 /* AWSKMS */,
 				EF2C3A671EAA73D50071AA93 /* Tests */,
 				EF1CF36F1B7BD9D900253C2B /* AWSCore */,
@@ -1271,6 +1272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFD704A720C17377008B21C7 /* README.markdown in Resources */,
+				EF1A295922E4109D006F08F9 /* updateAWSFromRespoitory.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
