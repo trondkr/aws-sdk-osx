@@ -382,7 +382,7 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
     
     return [[credentialsProvider credentials] continueWithSuccessBlock:^id _Nullable(AWSTask<AWSCredentials *> * _Nonnull task) {
         AWSCredentials *credentials = task.result;
-        
+        NSLog(@"CREDENTIALS AWS 2 %@", credentials.description);
         //Implementation of V4 signaure http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html
         NSMutableString *queryString = [NSMutableString new];
         
