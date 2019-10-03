@@ -382,7 +382,6 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
     
     return [[credentialsProvider credentials] continueWithSuccessBlock:^id _Nullable(AWSTask<AWSCredentials *> * _Nonnull task) {
         AWSCredentials *credentials = task.result;
-        NSLog(@"CREDENTIALS AWS 2 %@", credentials.description);
         //Implementation of V4 signaure http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html
         NSMutableString *queryString = [NSMutableString new];
         
@@ -402,8 +401,6 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
         NSString *signingCredentials = [NSString stringWithFormat:@"%@/%@",credentials.accessKey, scope];
         //need to replace "/" with "%2F"
         NSString *xAmzCredentialString = [signingCredentials stringByReplacingOccurrencesOfString:@"/" withString:@"\%2F"];
-        NSLog(@"SCOPE %@",scope);
-        NSLog(@"xAmzCredentialString %@",xAmzCredentialString);
         [queryString appendFormat:@"%@=%@&",@"X-Amz-Credential",xAmzCredentialString];
         
         //X-Amz-Date in ISO 8601 format, for example, 20130721T201207Z. This value must match the date value used to calculate the signature.

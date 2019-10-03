@@ -614,7 +614,7 @@ NSString *const AWSJSONParserErrorDomain = @"com.amazonaws.AWSJSONParserErrorDom
                     ![xmlName isEqualToString:@"requestId"] &&
                     ![xmlName isEqualToString:@"ResponseMetadata"] &&
                     ![xmlName isEqualToString:@"__text"]) {
-                    AWSDDLogWarn(@"Response element ignored: no rule for %@ - %@", xmlName, [value description]);
+                 //   AWSDDLogWarn(@"Response element ignored: no rule for %@ - %@", xmlName, [value description]);
                 }
 
                 /*[self failWithCode:AWSXMLParserXMLNameNotFoundInDefinition

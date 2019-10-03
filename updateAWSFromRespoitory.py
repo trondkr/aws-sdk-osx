@@ -16,7 +16,7 @@ fpathM='{}/**/*.m'.format(directory_in_str)
 
 fpaths=[fpathH,fpathM]
 
-doUIKIT=True
+doUIKIT=False
 
 #import "AWSServiceEnum.h"
 #import "AWSIdentityProvider.h"
@@ -81,7 +81,7 @@ for fpath in fpaths:
             if (tostring=='#import <UIKit/UIKit.h>' and doUIKIT) or  (tostring!='#import <UIKit/UIKit.h>'):
                 replaceAll(src,dst,fromstring,tostring)
                 if "Resources" in fpath:
-                    addlibstring=''"#import "AWSCocoaLumberjack.h"'
+                    addlibstring='"#import "AWSCocoaLumberjack.h"'
                     srcfile=open(src,'a')
                     lines=src.readlines()
                     lines.insert(0,addlibstring)

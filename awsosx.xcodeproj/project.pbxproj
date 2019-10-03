@@ -217,6 +217,13 @@
 		EFDAB3782017798A001DE93E /* SDTransferManagerManyFilesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37220177989001DE93E /* SDTransferManagerManyFilesTest.m */; };
 		EFDAB3792017798A001DE93E /* SDTransferUtillityAccelerationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37320177989001DE93E /* SDTransferUtillityAccelerationTest.m */; };
 		EFDAB37A2017798A001DE93E /* SDTransferManagerOneBigFileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB3742017798A001DE93E /* SDTransferManagerOneBigFileTest.m */; };
+		EFEC6E8A23414DE50075230D /* AWSCloudWatchResources.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC6E8223414DE50075230D /* AWSCloudWatchResources.m */; };
+		EFEC6E8B23414DE50075230D /* AWSCloudWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEC6E8323414DE50075230D /* AWSCloudWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFEC6E8D23414DE50075230D /* AWSCloudWatchResources.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEC6E8523414DE50075230D /* AWSCloudWatchResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFEC6E8E23414DE50075230D /* AWSCloudWatchService.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEC6E8623414DE50075230D /* AWSCloudWatchService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFEC6E8F23414DE50075230D /* AWSCloudWatchModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEC6E8723414DE50075230D /* AWSCloudWatchModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFEC6E9023414DE50075230D /* AWSCloudWatchService.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC6E8823414DE50075230D /* AWSCloudWatchService.m */; };
+		EFEC6E9123414DE50075230D /* AWSCloudWatchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC6E8923414DE50075230D /* AWSCloudWatchModel.m */; };
 		EFEF60371DDCC3B000370F14 /* AWSS3RequestRetryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEF60331DDCC3B000370F14 /* AWSS3RequestRetryHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFEF60381DDCC3B000370F14 /* AWSS3RequestRetryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF60341DDCC3B000370F14 /* AWSS3RequestRetryHandler.m */; };
 		EFEF60391DDCC3B000370F14 /* AWSS3Serializer.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEF60351DDCC3B000370F14 /* AWSS3Serializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -481,6 +488,13 @@
 		EFDAB37220177989001DE93E /* SDTransferManagerManyFilesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferManagerManyFilesTest.m; path = awsosxTests/SDTransferManagerManyFilesTest.m; sourceTree = "<group>"; };
 		EFDAB37320177989001DE93E /* SDTransferUtillityAccelerationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferUtillityAccelerationTest.m; path = awsosxTests/SDTransferUtillityAccelerationTest.m; sourceTree = "<group>"; };
 		EFDAB3742017798A001DE93E /* SDTransferManagerOneBigFileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferManagerOneBigFileTest.m; path = awsosxTests/SDTransferManagerOneBigFileTest.m; sourceTree = "<group>"; };
+		EFEC6E8223414DE50075230D /* AWSCloudWatchResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSCloudWatchResources.m; path = AWSCloudWatch/AWSCloudWatchResources.m; sourceTree = "<group>"; };
+		EFEC6E8323414DE50075230D /* AWSCloudWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCloudWatch.h; path = AWSCloudWatch/AWSCloudWatch.h; sourceTree = "<group>"; };
+		EFEC6E8523414DE50075230D /* AWSCloudWatchResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCloudWatchResources.h; path = AWSCloudWatch/AWSCloudWatchResources.h; sourceTree = "<group>"; };
+		EFEC6E8623414DE50075230D /* AWSCloudWatchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCloudWatchService.h; path = AWSCloudWatch/AWSCloudWatchService.h; sourceTree = "<group>"; };
+		EFEC6E8723414DE50075230D /* AWSCloudWatchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCloudWatchModel.h; path = AWSCloudWatch/AWSCloudWatchModel.h; sourceTree = "<group>"; };
+		EFEC6E8823414DE50075230D /* AWSCloudWatchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSCloudWatchService.m; path = AWSCloudWatch/AWSCloudWatchService.m; sourceTree = "<group>"; };
+		EFEC6E8923414DE50075230D /* AWSCloudWatchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSCloudWatchModel.m; path = AWSCloudWatch/AWSCloudWatchModel.m; sourceTree = "<group>"; };
 		EFEF60331DDCC3B000370F14 /* AWSS3RequestRetryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3RequestRetryHandler.h; sourceTree = "<group>"; };
 		EFEF60341DDCC3B000370F14 /* AWSS3RequestRetryHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3RequestRetryHandler.m; sourceTree = "<group>"; };
 		EFEF60351DDCC3B000370F14 /* AWSS3Serializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3Serializer.h; sourceTree = "<group>"; };
@@ -551,6 +565,7 @@
 		EF1CF3351B7BD98800253C2B = {
 			isa = PBXGroup;
 			children = (
+				EFEC6E8123414DD50075230D /* AWSCloudWatch */,
 				EF5FDA9D22CEF2A700594E7A /* CocoaLumberjack.swift */,
 				EFEFABCA21122A8400E5D0F9 /* AWSAPIGateway */,
 				EFEFAB9021122A7900E5D0F9 /* AWSLambda */,
@@ -1024,6 +1039,20 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		EFEC6E8123414DD50075230D /* AWSCloudWatch */ = {
+			isa = PBXGroup;
+			children = (
+				EFEC6E8323414DE50075230D /* AWSCloudWatch.h */,
+				EFEC6E8723414DE50075230D /* AWSCloudWatchModel.h */,
+				EFEC6E8923414DE50075230D /* AWSCloudWatchModel.m */,
+				EFEC6E8523414DE50075230D /* AWSCloudWatchResources.h */,
+				EFEC6E8223414DE50075230D /* AWSCloudWatchResources.m */,
+				EFEC6E8623414DE50075230D /* AWSCloudWatchService.h */,
+				EFEC6E8823414DE50075230D /* AWSCloudWatchService.m */,
+			);
+			name = AWSCloudWatch;
+			sourceTree = "<group>";
+		};
 		EFEFAB9021122A7900E5D0F9 /* AWSLambda */ = {
 			isa = PBXGroup;
 			children = (
@@ -1181,6 +1210,10 @@
 				EF59B96020D844E400BEE4B6 /* AWSDDDispatchQueueLogFormatter.h in Headers */,
 				EF59B96120D844E400BEE4B6 /* AWSDDMultiFormatter.h in Headers */,
 				EF59B96320D844E400BEE4B6 /* AWSDDContextFilterLogFormatter.h in Headers */,
+				EFEC6E8E23414DE50075230D /* AWSCloudWatchService.h in Headers */,
+				EFEC6E8D23414DE50075230D /* AWSCloudWatchResources.h in Headers */,
+				EFEC6E8F23414DE50075230D /* AWSCloudWatchModel.h in Headers */,
+				EFEC6E8B23414DE50075230D /* AWSCloudWatch.h in Headers */,
 				EF1CF4851B7BD9D900253C2B /* AWSBolts.h in Headers */,
 				EF1CF50B1B7BD9D900253C2B /* AWSSTSModel.h in Headers */,
 				EF1CF4D91B7BD9D900253C2B /* NSError+AWSMTLModelException.h in Headers */,
@@ -1233,7 +1266,7 @@
 		EF1CF3361B7BD98800253C2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Rask Dev LLC";
 				TargetAttributes = {
 					EF1CF33E1B7BD98800253C2B = {
@@ -1320,6 +1353,7 @@
 				EFEFABA221122A7A00E5D0F9 /* AWSLambdaModel.m in Sources */,
 				EF1CF5851B7BD9D900253C2B /* AWSS3Model.m in Sources */,
 				EFEFAC52211232C800E5D0F9 /* AWSS3TransferUtility+HeaderHelper.m in Sources */,
+				EFEC6E9023414DE50075230D /* AWSCloudWatchService.m in Sources */,
 				EFEFAC1F21122A8500E5D0F9 /* AWSAPIGatewayClient.m in Sources */,
 				EFB187F31CCFA6B600003F6A /* AWSCancellationTokenSource.m in Sources */,
 				EF78E7051F7CEDCA00912A6F /* AWSService.m in Sources */,
@@ -1327,6 +1361,7 @@
 				EFEFABA521122A7A00E5D0F9 /* AWSLambdaInvoker.m in Sources */,
 				EF1CF4E01B7BD9D900253C2B /* NSValueTransformer+AWSMTLInversionAdditions.m in Sources */,
 				EF5FDA9E22CEF2A800594E7A /* CocoaLumberjack.swift in Sources */,
+				EFEC6E8A23414DE50075230D /* AWSCloudWatchResources.m in Sources */,
 				EF1CF4891B7BD9D900253C2B /* AWSExecutor.m in Sources */,
 				EF1CF59B1B7BD9D900253C2B /* AWSSESService.m in Sources */,
 				EF1CF50C1B7BD9D900253C2B /* AWSSTSModel.m in Sources */,
@@ -1369,6 +1404,7 @@
 				EF1CF5351B7BD9D900253C2B /* AWSXMLDictionary.m in Sources */,
 				EF59B94A20D8427500BEE4B6 /* AWSDDAbstractDatabaseLogger.m in Sources */,
 				EF59B95F20D844E400BEE4B6 /* AWSDDDispatchQueueLogFormatter.m in Sources */,
+				EFEC6E9123414DE50075230D /* AWSCloudWatchModel.m in Sources */,
 				EF52ACD91BF67D1800CA5431 /* AWSS3TransferUtility.m in Sources */,
 				EF1CF52F1B7BD9D900253C2B /* AWSModel.m in Sources */,
 				EFEFABA321122A7A00E5D0F9 /* AWSLambdaService.m in Sources */,

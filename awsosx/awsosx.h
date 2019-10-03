@@ -100,6 +100,10 @@
 #import <awsosx/AWSLambdaRequestRetryHandler.h>
 #import <awsosx/AWSLambdaInvoker.h>
 #import <awsosx/AWSLambdaModel.h>
+#import <awsosx/AWSCloudWatch.h>
+#import <awsosx/AWSCloudWatchModel.h>
+#import <awsosx/AWSCloudWatchService.h>
+#import <awsosx/AWSCloudWatchResources.h>
 #import <awsosx/AWSSESResources.h>
 #import <awsosx/AWSSESModel.h>
 #import <awsosx/AWSSESService.h>
