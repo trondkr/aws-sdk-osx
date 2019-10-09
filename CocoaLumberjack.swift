@@ -61,23 +61,23 @@ public func _AWSDDLogMessage(_ message: @autoclosure () -> String, level: AWSDDL
 }
 
 public func AWSDDLogDebug(_ message: @autoclosure () -> String, level: AWSDDLogLevel = defaultDebugLevel, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = true, AWSDDlog: AWSDDLog = AWSDDLog.sharedInstance) {
-    _AWSDDLogMessage(message, level: level, flag: .debug, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
+    _AWSDDLogMessage(message(), level: level, flag: .debug, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
 }
 
 public func AWSDDLogInfo(_ message: @autoclosure () -> String, level: AWSDDLogLevel = defaultDebugLevel, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = true, AWSDDlog: AWSDDLog = AWSDDLog.sharedInstance) {
-    _AWSDDLogMessage(message, level: level, flag: .info, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
+    _AWSDDLogMessage(message(), level: level, flag: .info, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
 }
 
 public func AWSDDLogWarn(_ message: @autoclosure () -> String, level: AWSDDLogLevel = defaultDebugLevel, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = true, AWSDDlog: AWSDDLog = AWSDDLog.sharedInstance) {
-    _AWSDDLogMessage(message, level: level, flag: .warning, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
+    _AWSDDLogMessage(message(), level: level, flag: .warning, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
 }
 
 public func AWSDDLogVerbose(_ message: @autoclosure () -> String, level: AWSDDLogLevel = defaultDebugLevel, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = true, AWSDDlog: AWSDDLog = AWSDDLog.sharedInstance) {
-    _AWSDDLogMessage(message, level: level, flag: .verbose, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
+    _AWSDDLogMessage(message(), level: level, flag: .verbose, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
 }
 
 public func AWSDDLogError(_ message: @autoclosure () -> String, level: AWSDDLogLevel = defaultDebugLevel, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = false, AWSDDlog: AWSDDLog = AWSDDLog.sharedInstance) {
-    _AWSDDLogMessage(message, level: level, flag: .error, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
+    _AWSDDLogMessage(message(), level: level, flag: .error, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, AWSDDlog: AWSDDlog)
 }
 
 /// Returns a String of the current filename, without full path or extension.

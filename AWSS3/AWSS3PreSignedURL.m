@@ -234,8 +234,6 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
                                                           userInfo:@{NSLocalizedDescriptionKey: @"expires can not be in past"}]
                     ];
         }
-        NSLog(@"CRED bucketName %@", bucketName);
-        NSLog(@"CRED endpoint %@", endpoint.regionName);
         //validate httpMethod
         switch (httpMethod) {
             case AWSHTTPMethodGET:
@@ -268,7 +266,6 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         } else {
             keyPath = (keyName == nil ? [NSString stringWithFormat:@"%@", bucketName] : [NSString stringWithFormat:@"%@/%@", bucketName, [keyName aws_stringWithURLEncodingPath]]);
         }
-           NSLog(@"CRED keyPath %@", keyPath);
         //generate correct hostName (use virtualHostStyle if possible)
         NSString *host = nil;
         if (!self.configuration.localTestingEnabled &&
@@ -281,7 +278,6 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
             }
         } else {
             host = endpoint.hostName;
-            NSLog(@"CRED host %@", host);
         }
         [getPreSignedURLRequest setValue:host forRequestHeader:@"host"];
         
@@ -297,7 +293,6 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         }
         NSString *portNumber = endpoint.portNumber != nil ? [NSString stringWithFormat:@":%@", endpoint.portNumber.stringValue]: @"";
         AWSEndpoint *newEndpoint = [[AWSEndpoint alloc]initWithRegion:configuration.regionType service:AWSServiceS3 URL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@", endpoint.useUnsafeURL?@"http":@"https", host, portNumber]]];
-         NSLog(@"CRED newEndpoint %@ URL : %@", newEndpoint.regionName,[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@", endpoint.useUnsafeURL?@"http":@"https", host, portNumber]]);
         int32_t expireDuration = [expires timeIntervalSinceNow];
         if (expireDuration > 604800) {
             return [AWSTask taskWithError:[NSError errorWithDomain:AWSS3PresignedURLErrorDomain
