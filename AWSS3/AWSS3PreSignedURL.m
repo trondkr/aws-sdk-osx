@@ -163,7 +163,6 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     BOOL isAccelerateModeEnabled = getPreSignedURLRequest.isAccelerateModeEnabled;
 
     NSDate *expires = getPreSignedURLRequest.expires;
-    NSLog(@"\n CRED EXPIRES %@", expires);
     return [[[AWSTask taskWithResult:nil] continueWithBlock:^id(AWSTask *task) {
 
         //validate additionalParams
