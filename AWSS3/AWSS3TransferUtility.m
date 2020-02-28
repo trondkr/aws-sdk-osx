@@ -2064,7 +2064,7 @@ didCompleteWithError:(NSError *)error {
             uploadTask.error = error;
             if (error && HTTPResponse) {
                 
-                NSDictionary *userinfo=error.userInfo[@"Error"];
+               // NSDictionary *userinfo=error.userInfo[@"Error"];
                 if ([self isErrorRetriable:HTTPResponse.statusCode responseFromServer:uploadTask.responseData] )  {
                     AWSDDLogDebug(@"Received a 500, 503 or 400 error. Response Data is [%@] HTTPResponse %@", uploadTask.responseData, HTTPResponse );
                     if (uploadTask.retryCount < self.transferUtilityConfiguration.retryLimit) {

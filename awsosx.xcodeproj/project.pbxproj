@@ -123,8 +123,6 @@
 		EF1CF58B1B7BD9D900253C2B /* AWSS3Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CF43E1B7BD9D900253C2B /* AWSS3Resources.m */; };
 		EF1CF58D1B7BD9D900253C2B /* AWSS3Service.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF43F1B7BD9D900253C2B /* AWSS3Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF58E1B7BD9D900253C2B /* AWSS3Service.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CF4401B7BD9D900253C2B /* AWSS3Service.m */; };
-		EF1CF5901B7BD9D900253C2B /* AWSS3TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF4411B7BD9D900253C2B /* AWSS3TransferManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF1CF5911B7BD9D900253C2B /* AWSS3TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CF4421B7BD9D900253C2B /* AWSS3TransferManager.m */; };
 		EF1CF5931B7BD9D900253C2B /* AWSSES.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF4441B7BD9D900253C2B /* AWSSES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF5941B7BD9D900253C2B /* AWSSESModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF4451B7BD9D900253C2B /* AWSSESModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF5951B7BD9D900253C2B /* AWSSESModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CF4461B7BD9D900253C2B /* AWSSESModel.m */; };
@@ -391,8 +389,6 @@
 		EF1CF43E1B7BD9D900253C2B /* AWSS3Resources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3Resources.m; sourceTree = "<group>"; };
 		EF1CF43F1B7BD9D900253C2B /* AWSS3Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3Service.h; sourceTree = "<group>"; };
 		EF1CF4401B7BD9D900253C2B /* AWSS3Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3Service.m; sourceTree = "<group>"; };
-		EF1CF4411B7BD9D900253C2B /* AWSS3TransferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3TransferManager.h; sourceTree = "<group>"; };
-		EF1CF4421B7BD9D900253C2B /* AWSS3TransferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3TransferManager.m; sourceTree = "<group>"; };
 		EF1CF4441B7BD9D900253C2B /* AWSSES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSSES.h; sourceTree = "<group>"; };
 		EF1CF4451B7BD9D900253C2B /* AWSSESModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSSESModel.h; sourceTree = "<group>"; };
 		EF1CF4461B7BD9D900253C2B /* AWSSESModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSSESModel.m; sourceTree = "<group>"; };
@@ -885,8 +881,6 @@
 				EF1CF43E1B7BD9D900253C2B /* AWSS3Resources.m */,
 				EF1CF43F1B7BD9D900253C2B /* AWSS3Service.h */,
 				EF1CF4401B7BD9D900253C2B /* AWSS3Service.m */,
-				EF1CF4411B7BD9D900253C2B /* AWSS3TransferManager.h */,
-				EF1CF4421B7BD9D900253C2B /* AWSS3TransferManager.m */,
 			);
 			path = AWSS3;
 			sourceTree = "<group>";
@@ -1149,7 +1143,6 @@
 				EF1CF4981B7BD9D900253C2B /* AWSCognitoIdentityService.h in Headers */,
 				EF1CF59A1B7BD9D900253C2B /* AWSSESService.h in Headers */,
 				EF1CF4921B7BD9D900253C2B /* AWSCognitoIdentityModel.h in Headers */,
-				EF1CF5901B7BD9D900253C2B /* AWSS3TransferManager.h in Headers */,
 				EF1CF5281B7BD9D900253C2B /* AWSCategory.h in Headers */,
 				EF1CF4D61B7BD9D900253C2B /* NSDictionary+AWSMTLManipulationAdditions.h in Headers */,
 				EF1CF5B51B7BD9D900253C2B /* AWSSQSResources.h in Headers */,
@@ -1266,7 +1259,7 @@
 		EF1CF3361B7BD98800253C2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Rask Dev LLC";
 				TargetAttributes = {
 					EF1CF33E1B7BD98800253C2B = {
@@ -1326,7 +1319,6 @@
 				EF006594204D6808007DD879 /* AWSDynamoDBRequestRetryHandler.m in Sources */,
 				EF1CF4FB1B7BD9D900253C2B /* AWSURLRequestSerialization.m in Sources */,
 				EF59771A1FA6523C00380487 /* AWSKMSService.m in Sources */,
-				EF1CF5911B7BD9D900253C2B /* AWSS3TransferManager.m in Sources */,
 				EF1CF4C41B7BD9D900253C2B /* AWSMTLReflection.m in Sources */,
 				EF59B94F20D8427500BEE4B6 /* AWSDDTTYLogger.m in Sources */,
 				EF59B94220D8427500BEE4B6 /* AWSDDOSLogger.m in Sources */,

@@ -118,7 +118,6 @@
 #import <awsosx/AWSS3Serializer.h>
 #import <awsosx/AWSS3Resources.h>
 #import <awsosx/AWSS3.h>
-#import <awsosx/AWSS3TransferManager.h>
 #import <awsosx/AWSS3RequestRetryHandler.h>
 #import <awsosx/AWSDynamoDBRequestRetryHandler.h>
 #import <awsosx/AWSDynamoDBResources.h>
