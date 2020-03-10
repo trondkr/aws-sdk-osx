@@ -5,13 +5,14 @@ import re
 directory_in_str="."
 
 # This script is used to convert all of the paths in the AWS iOS 
-# SDK dopwnloaded from Github into a correct format for 
+# SDK downloaded from Github into a correct format for 
 # creating a local Macos framework.
 # Run this before you manually edit all of tyhe UIKit references.
 # Trond Kristiansen, Rask Dev LLC, 10.04.2019
 #
 # NOTE: Manuall add '#import "AWSCocoaLumberjack.h"' to all headers of
 # ...Resources.m files as we have removed the objective-c version of Cocoalumberjack and will only use the Swift version.
+# Add - (BOOL)aws_isDNSBucketName; to header in AWSCategory.h
 
 # Loop over all .h and .m files in subfolders and replace strings 
 fpathH='{}/**/*.h'.format(directory_in_str)
