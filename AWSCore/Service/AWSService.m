@@ -16,11 +16,7 @@
 #import "AWSService.h"
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
-#else
-#import <Cocoa/Cocoa.h>
-#endif
 #else
 #import <Cocoa/Cocoa.h>
 #endif
@@ -29,7 +25,7 @@
 #import "AWSCocoaLumberjack.h"
 #import "AWSCategory.h"
 
-NSString *const AWSiOSSDKVersion = @"2.11.1";
+NSString *const AWSiOSSDKVersion = @"2.13.0";
 NSString *const AWSServiceErrorDomain = @"com.amazonaws.AWSServiceErrorDomain";
 
 static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
@@ -166,38 +162,38 @@ static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
 + (NSString *)baseUserAgent {
     static NSString *_userAgent = nil;
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString *systemName;
-        systemName = [NSString stringWithFormat:@"Syncsolution"];
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-        NSString *systemName = [[[UIDevice currentDevice] systemName] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
-#endif
-        if (!systemName) {
-            systemName = AWSServiceConfigurationUnknown;
-        }
-        NSString *systemVersion;
-        systemVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
-        
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-        systemVersion = [[UIDevice currentDevice] systemVersion];
-#endif
-        if (!systemVersion) {
-            systemVersion = AWSServiceConfigurationUnknown;
-        }
-        NSString *localeIdentifier = [[NSLocale currentLocale] localeIdentifier];
-        if (!localeIdentifier) {
-            localeIdentifier = AWSServiceConfigurationUnknown;
-        }
-        _userAgent = [NSString stringWithFormat:@"aws-sdk-macos/%@ %@/%@ %@", AWSiOSSDKVersion, systemName, systemVersion, localeIdentifier];
-    });
+     dispatch_once(&onceToken, ^{
+            NSString *systemName;
+            systemName = [NSString stringWithFormat:@"Syncsolution"];
+    #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+            NSString *systemName = [[[UIDevice currentDevice] systemName] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+    #endif
+            if (!systemName) {
+                systemName = AWSServiceConfigurationUnknown;
+            }
+            NSString *systemVersion;
+            systemVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+            
+    #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+            systemVersion = [[UIDevice currentDevice] systemVersion];
+    #endif
+            if (!systemVersion) {
+                systemVersion = AWSServiceConfigurationUnknown;
+            }
+            NSString *localeIdentifier = [[NSLocale currentLocale] localeIdentifier];
+            if (!localeIdentifier) {
+                localeIdentifier = AWSServiceConfigurationUnknown;
+            }
+            _userAgent = [NSString stringWithFormat:@"aws-sdk-macos/%@ %@/%@ %@", AWSiOSSDKVersion, systemName, systemVersion, localeIdentifier];
+        });
 
-    NSMutableString *userAgent = [NSMutableString stringWithString:_userAgent];
-    for (NSString *prefix in _globalUserAgentPrefixes) {
-        [userAgent appendFormat:@" %@", prefix];
+        NSMutableString *userAgent = [NSMutableString stringWithString:_userAgent];
+        for (NSString *prefix in _globalUserAgentPrefixes) {
+            [userAgent appendFormat:@" %@", prefix];
+        }
+
+        return [NSString stringWithString:userAgent];
     }
-
-    return [NSString stringWithString:userAgent];
-}
 
 static NSMutableArray *_globalUserAgentPrefixes = nil;
 
@@ -281,6 +277,7 @@ static NSString *const AWSServiceNameCognitoIdentity = @"cognito-identity";
 static NSString *const AWSServiceNameCognitoIdentityProvider = @"cognito-idp";
 static NSString *const AWSServiceNameCognitoSync = @"cognito-sync";
 static NSString *const AWSServiceNameConnect = @"connect";
+static NSString *const AWSServiceNameConnectParticipant = @"connectparticipant";
 static NSString *const AWSServiceNameDynamoDB = @"dynamodb";
 static NSString *const AWSServiceNameEC2 = @"ec2";
 static NSString *const AWSServiceNameElasticLoadBalancing = @"elasticloadbalancing";
@@ -309,7 +306,9 @@ static NSString *const AWSServiceNameTranslate = @"translate";
 static NSString *const AWSServiceNameComprehend = @"comprehend";
 static NSString *const AWSServiceNameKinesisVideo = @"kinesisvideo";
 static NSString *const AWSServiceNameKinesisVideoArchivedMedia = @"kinesisvideo";
+static NSString *const AWSServiceNameKinesisVideoSignaling = @"kinesisvideo";
 static NSString *const AWSServiceNameSageMakerRuntime = @"sagemaker";
+static NSString *const AWSServiceNameTranscribeStreaming = @"transcribe";
 
 @interface AWSEndpoint()
 
@@ -506,24 +505,34 @@ static NSString *const AWSServiceNameSageMakerRuntime = @"sagemaker";
             return AWSServiceNameCognitoIdentityProvider;
         case AWSServiceCognitoSync:
             return AWSServiceNameCognitoSync;
+        case AWSServiceComprehend:
+            return AWSServiceNameComprehend;
         case AWSServiceConnect:
             return AWSServiceNameConnect;
+        case AWSServiceConnectParticipant:
+            return AWSServiceNameConnectParticipant;
         case AWSServiceDynamoDB:
             return AWSServiceNameDynamoDB;
         case AWSServiceEC2:
             return AWSServiceNameEC2;
         case AWSServiceElasticLoadBalancing:
             return AWSServiceNameElasticLoadBalancing;
+        case AWSServiceFirehose:
+            return AWSServiceNameFirehose;
         case AWSServiceIoT:
             return AWSServiceNameIoT;
         case AWSServiceIoTData:
             return AWSServiceNameIoTData;
-        case AWSServiceFirehose:
-            return AWSServiceNameFirehose;
-        case AWSServiceKinesis:
-            return AWSServiceNameKinesis;
         case AWSServiceKMS:
             return AWSServiceNameKMS;
+        case AWSServiceKinesis:
+            return AWSServiceNameKinesis;
+        case AWSServiceKinesisVideo:
+            return AWSServiceNameKinesisVideo;
+        case AWSServiceKinesisVideoArchivedMedia:
+            return AWSServiceNameKinesisVideoArchivedMedia;
+        case AWSServiceKinesisVideoSignaling:
+            return AWSServiceNameKinesisVideoSignaling;
         case AWSServiceLambda:
             return AWSServiceNameLambda;
         case AWSServiceLexRuntime:
@@ -534,38 +543,34 @@ static NSString *const AWSServiceNameSageMakerRuntime = @"sagemaker";
             return AWSServiceNameMachineLearning;
         case AWSServiceMobileAnalytics:
             return AWSServiceNameMobileAnalytics;
-        case AWSServicePolly:
-            return AWSServiceNamePolly;
         case AWSServiceMobileTargeting:
             return AWSServiceNameMobileTargeting;
+        case AWSServicePolly:
+            return AWSServiceNamePolly;
         case AWSServiceRekognition:
             return AWSServiceNameRekognition;
         case AWSServiceS3:
             return AWSServiceNameS3;
         case AWSServiceSES:
             return AWSServiceNameSES;
-        case AWSServiceSimpleDB:
-            return AWSServiceNameSimpleDB;
         case AWSServiceSNS:
             return AWSServiceNameSNS;
         case AWSServiceSQS:
             return AWSServiceNameSQS;
         case AWSServiceSTS:
             return AWSServiceNameSTS;
+        case AWSServiceSageMakerRuntime:
+            return AWSServiceNameSageMakerRuntime;
+        case AWSServiceSimpleDB:
+            return AWSServiceNameSimpleDB;
         case AWSServiceTextract:
             return AWSServiceNameTextract;
         case AWSServiceTranscribe:
             return AWSServiceNameTranscribe;
+        case AWSServiceTranscribeStreaming:
+            return AWSServiceNameTranscribeStreaming;
         case AWSServiceTranslate:
             return AWSServiceNameTranslate;
-        case AWSServiceComprehend:
-            return AWSServiceNameComprehend;
-        case AWSServiceKinesisVideo:
-            return AWSServiceNameKinesisVideo;
-        case AWSServiceKinesisVideoArchivedMedia:
-            return AWSServiceNameKinesisVideoArchivedMedia;
-        case AWSServiceSageMakerRuntime:
-            return AWSServiceNameSageMakerRuntime;
         default:
             return nil;
     }
@@ -652,6 +657,10 @@ static NSString *const AWSServiceNameSageMakerRuntime = @"sagemaker";
         URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://pinpoint%@%@.amazonaws.com", HTTPType, separator, regionName]];
     } else if (serviceType == AWSServiceSageMakerRuntime) {
         URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://runtime.%@%@%@.amazonaws.com", HTTPType, serviceName, separator, regionName]];
+    } else if (serviceType == AWSServiceTranscribeStreaming) {
+        URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://transcribestreaming%@%@.amazonaws.com", HTTPType, separator, regionName]];
+    }  else if (serviceType == AWSServiceConnectParticipant) {
+        URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://participant.connect%@%@.amazonaws.com", HTTPType, separator, regionName]];
     } else {
         URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@%@.amazonaws.com", HTTPType, serviceName, separator, regionName]];
     }

@@ -15,11 +15,7 @@
 
 #import "AWSClientContext.h"
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
-#else
-#import <Cocoa/Cocoa.h>
-#endif
 #else
 #import <Cocoa/Cocoa.h>
 #endif
@@ -73,27 +69,27 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
         _appPackageName = appPackageName ? appPackageName : AWSClientContextUnknown;
         _appName = appName ? appName : AWSClientContextUnknown;
 
-        //Device Details
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-        
-        UIDevice* currentDevice = [UIDevice currentDevice];
-        NSString *autoUpdatingLoaleIdentifier = [[NSLocale autoupdatingCurrentLocale] localeIdentifier];
-        _devicePlatform = [currentDevice systemName] ? [currentDevice systemName] : AWSClientContextUnknown;
-        _deviceModel = [currentDevice model] ? [currentDevice model] : AWSClientContextUnknown;
-        _deviceModelVersion = [self deviceModelVersionCode] ? [self deviceModelVersionCode] : AWSClientContextUnknown;
-        _devicePlatformVersion = [currentDevice systemVersion] ? [currentDevice systemVersion] : AWSClientContextUnknown;
-        _deviceManufacturer = @"apple";
-        _deviceLocale = autoUpdatingLoaleIdentifier ? autoUpdatingLoaleIdentifier : AWSClientContextUnknown;
-#else
-        _devicePlatformVersion = [[NSProcessInfo processInfo] operatingSystemVersionString];
-        _devicePlatform=@"macOS";
-        _deviceModel=@"macOS";
-        _deviceModelVersion=@"macOS";
-        _deviceLocale=@"macOS";
-#endif
-        _customAttributes = @{};
-        _serviceDetails = [NSMutableDictionary new];
-    }
+           //Device Details
+        #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+                
+                UIDevice* currentDevice = [UIDevice currentDevice];
+                NSString *autoUpdatingLoaleIdentifier = [[NSLocale autoupdatingCurrentLocale] localeIdentifier];
+                _devicePlatform = [currentDevice systemName] ? [currentDevice systemName] : AWSClientContextUnknown;
+                _deviceModel = [currentDevice model] ? [currentDevice model] : AWSClientContextUnknown;
+                _deviceModelVersion = [self deviceModelVersionCode] ? [self deviceModelVersionCode] : AWSClientContextUnknown;
+                _devicePlatformVersion = [currentDevice systemVersion] ? [currentDevice systemVersion] : AWSClientContextUnknown;
+                _deviceManufacturer = @"apple";
+                _deviceLocale = autoUpdatingLoaleIdentifier ? autoUpdatingLoaleIdentifier : AWSClientContextUnknown;
+        #else
+                _devicePlatformVersion = [[NSProcessInfo processInfo] operatingSystemVersionString];
+                _devicePlatform=@"macOS";
+                _deviceModel=@"macOS";
+                _deviceModelVersion=@"macOS";
+                _deviceLocale=@"macOS";
+        #endif
+                _customAttributes = @{};
+                _serviceDetails = [NSMutableDictionary new];
+            }
 
     return self;
 }

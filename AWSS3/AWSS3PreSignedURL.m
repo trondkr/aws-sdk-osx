@@ -26,7 +26,7 @@ NSString *const AWSS3PresignedURLErrorDomain = @"com.amazonaws.AWSS3PresignedURL
 static NSString *const AWSS3PreSignedURLBuilderAcceleratedEndpoint = @"s3-accelerate.amazonaws.com";
 
 static NSString *const AWSInfoS3PreSignedURLBuilder = @"S3PreSignedURLBuilder";
-static NSString *const AWSS3PreSignedURLBuilderSDKVersion = @"2.11.1";
+static NSString *const AWSS3PreSignedURLBuilderSDKVersion = @"2.13.0";
 
 @interface AWSS3PreSignedURLBuilder()
 
@@ -163,6 +163,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     BOOL isAccelerateModeEnabled = getPreSignedURLRequest.isAccelerateModeEnabled;
 
     NSDate *expires = getPreSignedURLRequest.expires;
+
     return [[[AWSTask taskWithResult:nil] continueWithBlock:^id(AWSTask *task) {
 
         //validate additionalParams
@@ -233,6 +234,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
                                                           userInfo:@{NSLocalizedDescriptionKey: @"expires can not be in past"}]
                     ];
         }
+
         //validate httpMethod
         switch (httpMethod) {
             case AWSHTTPMethodGET:
@@ -265,6 +267,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         } else {
             keyPath = (keyName == nil ? [NSString stringWithFormat:@"%@", bucketName] : [NSString stringWithFormat:@"%@/%@", bucketName, [keyName aws_stringWithURLEncodingPath]]);
         }
+
         //generate correct hostName (use virtualHostStyle if possible)
         NSString *host = nil;
         if (!self.configuration.localTestingEnabled &&
@@ -292,6 +295,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         }
         NSString *portNumber = endpoint.portNumber != nil ? [NSString stringWithFormat:@":%@", endpoint.portNumber.stringValue]: @"";
         AWSEndpoint *newEndpoint = [[AWSEndpoint alloc]initWithRegion:configuration.regionType service:AWSServiceS3 URL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@", endpoint.useUnsafeURL?@"http":@"https", host, portNumber]]];
+        
         int32_t expireDuration = [expires timeIntervalSinceNow];
         if (expireDuration > 604800) {
             return [AWSTask taskWithError:[NSError errorWithDomain:AWSS3PresignedURLErrorDomain

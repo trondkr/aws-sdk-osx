@@ -27,6 +27,7 @@
 #import <awsosx/AWSEXTKeyPathCoding.h>
 #import <awsosx/AWSXMLWriter.h>
 #import <awsosx/AWSNetworking.h>
+#import <awsosx/AWSNetworkingHelpers.h>
 #import <awsosx/AWSURLSessionManager.h>
 #import <awsosx/AWSValidation.h>
 #import <awsosx/AWSURLRequestSerialization.h>

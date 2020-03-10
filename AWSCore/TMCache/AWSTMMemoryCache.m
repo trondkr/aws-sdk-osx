@@ -2,11 +2,7 @@
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
-#else
-#import <Cocoa/Cocoa.h>
-#endif
 #else
 #import <Cocoa/Cocoa.h>
 #endif

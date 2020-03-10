@@ -14,11 +14,7 @@
 //
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
-#else
-#import <Cocoa/Cocoa.h>
-#endif
 #else
 #import <Cocoa/Cocoa.h>
 #endif
@@ -411,7 +407,6 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 handleEventsForBackgroundURLSession:(NSString *)identifier
            completionHandler:(void (^)(void))completionHandler;
 #endif
-
 /**
  Saves the `NSData` to a temporary directory and uploads it to the configured Amazon S3 bucket in `AWSS3TransferUtilityConfiguration`.
  

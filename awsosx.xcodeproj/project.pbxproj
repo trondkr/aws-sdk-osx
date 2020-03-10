@@ -18,7 +18,9 @@
 		EF00659A204D6808007DD879 /* AWSDynamoDBModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EF00658E204D6806007DD879 /* AWSDynamoDBModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF00659B204D6808007DD879 /* AWSDynamoDBObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF00658F204D6807007DD879 /* AWSDynamoDBObjectMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF00659C204D6808007DD879 /* AWSDynamoDBService.h in Headers */ = {isa = PBXBuildFile; fileRef = EF006590204D6807007DD879 /* AWSDynamoDBService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF1A295922E4109D006F08F9 /* updateAWSFromRespoitory.py in Resources */ = {isa = PBXBuildFile; fileRef = EF1A295822E4109D006F08F9 /* updateAWSFromRespoitory.py */; };
+		EF12AD6B2418351B00321CFD /* AWSNetworkingHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = EF12AD692418351A00321CFD /* AWSNetworkingHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF12AD6C2418351B00321CFD /* AWSNetworkingHelpers.m in Headers */ = {isa = PBXBuildFile; fileRef = EF12AD6A2418351B00321CFD /* AWSNetworkingHelpers.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF12AD6E241837B200321CFD /* AWSNetworkingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EF12AD6D241837B100321CFD /* AWSNetworkingHelpers.m */; };
 		EF1CF3451B7BD98800253C2B /* awsosx.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF3441B7BD98800253C2B /* awsosx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF47B1B7BD9D900253C2B /* AWSCredentialsProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1CF3711B7BD9D900253C2B /* AWSCredentialsProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF1CF47C1B7BD9D900253C2B /* AWSCredentialsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CF3721B7BD9D900253C2B /* AWSCredentialsProvider.m */; };
@@ -208,7 +210,6 @@
 		EFD704A420C17377008B21C7 /* AWSFMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD7049620C17377008B21C7 /* AWSFMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFD704A520C17377008B21C7 /* AWSFMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD7049720C17377008B21C7 /* AWSFMResultSet.m */; };
 		EFD704A620C17377008B21C7 /* AWSFMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD7049820C17377008B21C7 /* AWSFMDatabasePool.m */; };
-		EFD704A720C17377008B21C7 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = EFD7049920C17377008B21C7 /* README.markdown */; };
 		EFDAB3752017798A001DE93E /* SDTransferManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB36F20177989001DE93E /* SDTransferManagerTest.m */; };
 		EFDAB3762017798A001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37020177989001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m */; };
 		EFDAB3772017798A001DE93E /* SDTransferUtillityAccelerationOneBigfile.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37120177989001DE93E /* SDTransferUtillityAccelerationOneBigfile.m */; };
@@ -272,6 +273,9 @@
 		EF00658E204D6806007DD879 /* AWSDynamoDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBModel.h; path = AWSDynamoDB/AWSDynamoDBModel.h; sourceTree = "<group>"; };
 		EF00658F204D6807007DD879 /* AWSDynamoDBObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBObjectMapper.h; path = AWSDynamoDB/AWSDynamoDBObjectMapper.h; sourceTree = "<group>"; };
 		EF006590204D6807007DD879 /* AWSDynamoDBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSDynamoDBService.h; path = AWSDynamoDB/AWSDynamoDBService.h; sourceTree = "<group>"; };
+		EF12AD692418351A00321CFD /* AWSNetworkingHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSNetworkingHelpers.h; sourceTree = "<group>"; };
+		EF12AD6A2418351B00321CFD /* AWSNetworkingHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSNetworkingHelpers.m; sourceTree = "<group>"; };
+		EF12AD6D241837B100321CFD /* AWSNetworkingHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSNetworkingHelpers.m; sourceTree = "<group>"; };
 		EF1A295822E4109D006F08F9 /* updateAWSFromRespoitory.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = updateAWSFromRespoitory.py; sourceTree = "<group>"; };
 		EF1CF33F1B7BD98800253C2B /* awsosx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = awsosx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1CF3431B7BD98800253C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -743,6 +747,9 @@
 		EF1CF3BF1B7BD9D900253C2B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EF12AD6D241837B100321CFD /* AWSNetworkingHelpers.m */,
+				EF12AD692418351A00321CFD /* AWSNetworkingHelpers.h */,
+				EF12AD6A2418351B00321CFD /* AWSNetworkingHelpers.m */,
 				EF1CF3C01B7BD9D900253C2B /* AWSNetworking.h */,
 				EF1CF3C11B7BD9D900253C2B /* AWSNetworking.m */,
 				EF1CF3C21B7BD9D900253C2B /* AWSURLSessionManager.h */,
@@ -1106,6 +1113,8 @@
 				EF1CF4DC1B7BD9D900253C2B /* NSObject+AWSMTLComparisonAdditions.h in Headers */,
 				EF1CF4EA1B7BD9D900253C2B /* AWSURLSessionManager.h in Headers */,
 				EF1CF5171B7BD9D900253C2B /* AWSTMDiskCache.h in Headers */,
+				EF12AD6B2418351B00321CFD /* AWSNetworkingHelpers.h in Headers */,
+				EF12AD6C2418351B00321CFD /* AWSNetworkingHelpers.m in Headers */,
 				EF1CF5AB1B7BD9D900253C2B /* AWSSNSResources.h in Headers */,
 				EF1CF5001B7BD9D900253C2B /* AWSValidation.h in Headers */,
 				EF1CF5A81B7BD9D900253C2B /* AWSSNSModel.h in Headers */,
@@ -1297,8 +1306,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD704A720C17377008B21C7 /* README.markdown in Resources */,
-				EF1A295922E4109D006F08F9 /* updateAWSFromRespoitory.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1343,6 +1350,7 @@
 				EF1CF5A91B7BD9D900253C2B /* AWSSNSModel.m in Sources */,
 				EF1CF50F1B7BD9D900253C2B /* AWSSTSResources.m in Sources */,
 				EFEFABA221122A7A00E5D0F9 /* AWSLambdaModel.m in Sources */,
+				EF12AD6E241837B200321CFD /* AWSNetworkingHelpers.m in Sources */,
 				EF1CF5851B7BD9D900253C2B /* AWSS3Model.m in Sources */,
 				EFEFAC52211232C800E5D0F9 /* AWSS3TransferUtility+HeaderHelper.m in Sources */,
 				EFEC6E9023414DE50075230D /* AWSCloudWatchService.m in Sources */,
@@ -1573,7 +1581,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raskdevllc.awsosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raskdev.syncsolution.awsosx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1603,7 +1611,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raskdevllc.awsosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raskdev.syncsolution.awsosx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1719,7 +1727,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raskdevllc.awsosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raskdev.syncsolution.awsosx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

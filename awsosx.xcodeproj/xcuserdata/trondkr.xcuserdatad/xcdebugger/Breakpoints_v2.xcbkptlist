@@ -34,7 +34,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "587"
             endingLineNumber = "587"
-            landmarkName = "-portNumberForService:isLocalTestingPort:"
+            landmarkName = "-localTestingURLForService:port:useUnsafeURL:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

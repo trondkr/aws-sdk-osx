@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -62,11 +62,10 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
             _accessKey = keychain[AWSCredentialsProviderKeychainAccessKeyId];
             _secretKey = keychain[AWSCredentialsProviderKeychainSecretAccessKey];
             _sessionKey = keychain[AWSCredentialsProviderKeychainSessionToken];
-            NSLog(@"CREDENTIALS AWS %@ and %@",_accessKey,_secretKey);
+
             NSString *expirationString = keychain[AWSCredentialsProviderKeychainExpiration];
             if (expirationString) {
                 _expiration = [NSDate dateWithTimeIntervalSince1970:[expirationString doubleValue]];
-                NSLog(@"CREDENTIALS AWS _expiration %@",_expiration);
             }
         }
     }
@@ -122,7 +121,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 }
 
 - (void)invalidateCachedTemporaryCredentials {
-   // self.internalCredentials = nil;
+    // No-op
 }
 
 @end

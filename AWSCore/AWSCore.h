@@ -14,11 +14,7 @@
 //
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
-#else
-#import <Cocoa/Cocoa.h>
-#endif
 #else
 #import <Cocoa/Cocoa.h>
 #endif
@@ -54,11 +50,12 @@ FOUNDATION_EXPORT const unsigned char AWSCoreVersionString[] DEPRECATED_MSG_ATTR
 #import "AWSIdentityProvider.h"
 #import "AWSModel.h"
 #import "AWSNetworking.h"
+#import "AWSNetworkingHelpers.h"
 #import "AWSCategory.h"
 
 #import "AWSClientContext.h"
 #import "AWSSynchronizedMutableDictionary.h"
-
+#import "AWSXMLDictionary.h"
 #import "AWSSerialization.h"
 #import "AWSURLRequestSerialization.h"
 #import "AWSURLResponseSerialization.h"

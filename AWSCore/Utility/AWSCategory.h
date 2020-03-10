@@ -86,7 +86,6 @@ FOUNDATION_EXPORT NSString *const AWSDateShortDateFormat2;
 - (NSString *)aws_md5String;
 - (NSString *)aws_md5StringLittleEndian;
 - (BOOL)aws_isVirtualHostedStyleCompliant;
-- (BOOL)aws_isDNSBucketName;
 
 - (AWSRegionType)aws_regionTypeValue;
 

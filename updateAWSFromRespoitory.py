@@ -9,14 +9,17 @@ directory_in_str="."
 # creating a local Macos framework.
 # Run this before you manually edit all of tyhe UIKit references.
 # Trond Kristiansen, Rask Dev LLC, 10.04.2019
-#  
+#
+# NOTE: Manuall add '#import "AWSCocoaLumberjack.h"' to all headers of
+# ...Resources.m files as we have removed the objective-c version of Cocoalumberjack and will only use the Swift version.
+
 # Loop over all .h and .m files in subfolders and replace strings 
 fpathH='{}/**/*.h'.format(directory_in_str)
 fpathM='{}/**/*.m'.format(directory_in_str)
 
 fpaths=[fpathH,fpathM]
 
-doUIKIT=False
+doUIKIT=True
 
 #import "AWSServiceEnum.h"
 #import "AWSIdentityProvider.h"
