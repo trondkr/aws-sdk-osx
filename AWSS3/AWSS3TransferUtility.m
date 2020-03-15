@@ -1123,6 +1123,7 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
                                                           retry_count:transferUtilityUploadTask.retryCount
                                                         databaseQueue:self->_databaseQueue];
         if (startTransfer) {
+            AWSDDLogDebug(@"REsuming upload of task AWS");
             [uploadTask resume];
         }
         
@@ -2570,7 +2571,7 @@ didFinishDownloadingToURL:(NSURL *)location {
       didWriteData:(int64_t)bytesWritten
  totalBytesWritten:(int64_t)totalBytesWritten
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
-    AWSDDLogDebug(@"didWriteData called for download task %lu", (unsigned long)downloadTask.taskIdentifier);
+  //  AWSDDLogDebug(@"didWriteData called for download task %lu", (unsigned long)downloadTask.taskIdentifier);
     AWSS3TransferUtilityDownloadTask *transferUtilityDownloadTask =
         [self.taskDictionary objectForKey:@(downloadTask.taskIdentifier)];
    
