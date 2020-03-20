@@ -603,7 +603,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
 #pragma mark - Helper methods
 
 - (void)printHTTPHeadersAndBodyForRequest:(NSURLRequest *)request {
-    AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
+ //   AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
     if([AWSDDLog sharedInstance].logLevel & AWSDDLogFlagDebug){
         if(request.HTTPBody) {
             NSMutableString *bodyString = [[NSMutableString alloc] initWithData:request.HTTPBody

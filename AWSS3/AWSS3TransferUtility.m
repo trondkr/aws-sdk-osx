@@ -1091,7 +1091,7 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
         for (NSString *key in transferUtilityUploadTask.expression.requestHeaders) {
             [request setValue: transferUtilityUploadTask.expression.requestHeaders[key] forHTTPHeaderField:key];
         }
-        AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
+     //   AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
         NSURLSessionUploadTask *uploadTask = [self getURLSessionUploadTaskWithRequest:request
                                                                                   fromFile:[NSURL fileURLWithPath:transferUtilityUploadTask.file]
                                                                                      error:&error];
@@ -1123,7 +1123,7 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
                                                           retry_count:transferUtilityUploadTask.retryCount
                                                         databaseQueue:self->_databaseQueue];
         if (startTransfer) {
-            AWSDDLogDebug(@"REsuming upload of task AWS");
+            AWSDDLogDebug(@"Resuming upload of task AWS");
             [uploadTask resume];
         }
         
@@ -1734,7 +1734,7 @@ internalDictionaryToAddSubTaskTo: (NSMutableDictionary *) internalDictionaryToAd
             [request setValue:transferUtilityDownloadTask.expression.requestHeaders[key] forHTTPHeaderField:key];
         }
         
-        AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
+     //   AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
         
         NSURLSessionDownloadTask *downloadTask = [self.session downloadTaskWithRequest:request];
         transferUtilityDownloadTask.sessionTask = downloadTask;
@@ -2030,7 +2030,7 @@ completionHandler:(void (^)(void))completionHandler {
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error {
-    AWSDDLogDebug(@"Thread:%@: didCompleteWithError called for task %lu", [NSThread currentThread], (unsigned long)task.taskIdentifier);
+  //  AWSDDLogDebug(@"Thread:%@: didCompleteWithError called for task %lu", [NSThread currentThread], (unsigned long)task.taskIdentifier);
     NSHTTPURLResponse *HTTPResponse = nil;
     NSMutableDictionary *userInfo = nil;
     
@@ -2390,7 +2390,7 @@ didCompleteWithError:(NSError *)error {
    didSendBodyData:(int64_t)bytesSent
     totalBytesSent:(int64_t)totalBytesSent
 totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
-    AWSDDLogVerbose(@"didSendBodyData called for task %lu", (unsigned long)task.taskIdentifier);
+   // AWSDDLogVerbose(@"didSendBodyData called for task %lu", (unsigned long)task.taskIdentifier);
     //Check if the task is an uploadTask.
     if (![task isKindOfClass:[NSURLSessionUploadTask class]]) {
         return;

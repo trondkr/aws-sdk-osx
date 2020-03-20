@@ -518,7 +518,7 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
                                                                              query:queryString
                                                                            headers:request.allHTTPHeaderFields
                                                                      contentSha256:contentSha256];
-        AWSDDLogVerbose(@"AWSS4 PresignedURL Canonical request: [%@]", canonicalRequest);
+       // AWSDDLogVerbose(@"AWSS4 PresignedURL Canonical request: [%@]", canonicalRequest);
         
         //Generate String to Sign
         NSString *stringToSign = [NSString stringWithFormat:@"%@\n%@\n%@\n%@",
