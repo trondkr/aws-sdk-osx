@@ -380,14 +380,14 @@ static NSUInteger _numProcessors;
         tag:(id)tag
      format:(NSString *)format, ... {
     va_list args;
-    
+
     if (format) {
         va_start(args, format);
-        
+
         NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
-        
+
         va_end(args);
-        
+
         va_start(args, format);
         
         [self log:asynchronous

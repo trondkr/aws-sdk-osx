@@ -252,7 +252,7 @@ NSString * __nullable AWSDDExtractFileNameWithoutExtension(const char *filePath,
    function:(const char *)function
        line:(NSUInteger)line
         tag:(id __nullable)tag
-     format:(NSString *)format, ... NS_FORMAT_FUNCTION(9,10);
+     format:(NSString *)format, ... NS_FORMAT_FUNCTION(9, 10);
 
 /**
  * Logging Primitive.

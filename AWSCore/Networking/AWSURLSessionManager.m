@@ -632,7 +632,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
 - (void)printHTTPHeadersForResponse:(NSURLResponse *)response {
     if([AWSDDLog sharedInstance].logLevel & AWSDDLogFlagDebug){
         if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-            AWSDDLogDebug(@"Response headers:\n%@", ((NSHTTPURLResponse *)response).allHeaderFields);
+  //          AWSDDLogDebug(@"Response headers:\n%@", ((NSHTTPURLResponse *)response).allHeaderFields);
         }
     }
 }

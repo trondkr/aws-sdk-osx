@@ -262,14 +262,14 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
                                                                          query:query
                                                                        headers:headers
                                                                  contentSha256:contentSha256];
-    AWSDDLogVerbose(@"Canonical request: [%@]", canonicalRequest);
+   // AWSDDLogVerbose(@"Canonical request: [%@]", canonicalRequest);
 
     NSString *stringToSign = [NSString stringWithFormat:@"%@\n%@\n%@\n%@",
                               AWSSignatureV4Algorithm,
                               [urlRequest valueForHTTPHeaderField:@"X-Amz-Date"],
                               scope,
                               [AWSSignatureSignerUtility hexEncode:[AWSSignatureSignerUtility hashString:canonicalRequest]]];
-    AWSDDLogVerbose(@"AWS4 String to Sign: [%@]", stringToSign);
+    // AWSDDLogVerbose(@"AWS4 String to Sign: [%@]", stringToSign);
 
     NSData *kSigning  = [AWSSignatureV4Signer getV4DerivedKey:credentials.secretKey
                                                          date:dateStamp
@@ -349,7 +349,7 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
                               scope,
                               [AWSSignatureSignerUtility hexEncode:[AWSSignatureSignerUtility hashString:canonicalRequest]]];
 
-    AWSDDLogVerbose(@"AWS4 String to Sign: [%@]", stringToSign);
+    //  AWSDDLogVerbose(@"AWS4 String to Sign: [%@]", stringToSign);
 
     NSData *kSigning  = [AWSSignatureV4Signer getV4DerivedKey:credentials.secretKey
                                                          date:dateStamp
@@ -930,7 +930,7 @@ static NSString *const emptyStringSha256 = @"e3b0c44298fc1c149afbf4c8996fb92427a
                               self.priorSha256,
                               emptyStringSha256,
                               chunkSha256];
-    AWSDDLogVerbose(@"AWS4 String to Sign: [%@]", stringToSign);
+    //   AWSDDLogVerbose(@"AWS4 String to Sign: [%@]", stringToSign);
 
     NSData *signature = [AWSSignatureSignerUtility sha256HMacWithData:[stringToSign dataUsingEncoding:NSUTF8StringEncoding]
                                                               withKey:self.kSigning];

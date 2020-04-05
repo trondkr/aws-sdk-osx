@@ -58,12 +58,12 @@
     if([AWSDDLog sharedInstance].logLevel & AWSDDLogFlagDebug){
         if ([data isKindOfClass:[NSData class]]) {
             if ([data length] <= 100 * 1024) {
-                AWSDDLogDebug(@"Response body:\n%@", [[NSString alloc] initWithData:data
-                                                                           encoding:NSUTF8StringEncoding]);
+                //     AWSDDLogDebug(@"Response body:\n%@", [[NSString alloc] initWithData:data
+                //                                                                encoding:NSUTF8StringEncoding]);
             } else {
-                AWSDDLogDebug(@"Response body (Partial data. The first 100KB is displayed.):\n%@", [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(0, 100 * 1024)]
-                                                                                                                         encoding:NSUTF8StringEncoding]);
-                
+                //  AWSDDLogDebug(@"Response body (Partial data. The first 100KB is displayed.):\n%@", [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(0, 100 * 1024)]
+                //                                                                                                           encoding:NSUTF8StringEncoding]);
+
             }
         }
     }
@@ -236,12 +236,12 @@
     if([AWSDDLog sharedInstance].logLevel & AWSDDLogFlagDebug){
         if ([data isKindOfClass:[NSData class]]) {
             if ([data length] <= 100 * 1024) {
-                AWSDDLogDebug(@"Response body:\n%@", [[NSString alloc] initWithData:data
-                                                                           encoding:NSUTF8StringEncoding]);
+                //   AWSDDLogDebug(@"Response body:\n%@", [[NSString alloc] initWithData:data
+                //                                                            encoding:NSUTF8StringEncoding]);
             } else {
-                AWSDDLogDebug(@"Response body (Partial data. The first 100KB is displayed.):\n%@", [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(0, 100 * 1024)]
-                                                                                                                         encoding:NSUTF8StringEncoding]);
-                
+                // AWSDDLogDebug(@"Response body (Partial data. The first 100KB is displayed.):\n%@", [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(0, 100 * 1024)]
+                //                                                                                                 encoding:NSUTF8StringEncoding]);
+
             }
         }
     }

@@ -1268,7 +1268,7 @@
 		EF1CF3361B7BD98800253C2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Rask Dev LLC";
 				TargetAttributes = {
 					EF1CF33E1B7BD98800253C2B = {
