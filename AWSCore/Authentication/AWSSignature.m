@@ -527,8 +527,8 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
                                   credentialsScope,
                                   [AWSSignatureSignerUtility hexEncode:[AWSSignatureSignerUtility hashString:canonicalRequest]]];
         
-        AWSDDLogVerbose(@"AWS4 PresignedURL String to Sign: [%@]", stringToSign);
-        
+      //  AWSDDLogVerbose(@"AWS4 PresignedURL String to Sign: [%@]", stringToSign);
+        AWSDDLogVerbose(@"AWS4 PresignedURL finished");
         // Generate Signature
         NSData *kSigning  = [AWSSignatureV4Signer getV4DerivedKey:credentials.secretKey
                                                              date:[date aws_stringValue:AWSDateShortDateFormat1]
@@ -553,7 +553,7 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
 
         urlComponents.percentEncodedQuery = queryString;
 
-        AWSDDLogVerbose(@"AWS4 PresignedURL: [%@]", urlComponents.URL);
+     //   AWSDDLogVerbose(@"AWS4 PresignedURL: [%@]", urlComponents.URL);
         return urlComponents.URL;
     }];
 }
