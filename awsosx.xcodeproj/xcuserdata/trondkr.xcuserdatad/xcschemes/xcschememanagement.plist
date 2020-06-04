@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>awsosx.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>awsosxTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<true />
+			<true/>
 			<key>orderHint</key>
 			<integer>3</integer>
-		</dict>
-		<key>awsosx.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -22,17 +22,17 @@
 		<key>EF1CF33E1B7BD98800253C2B</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 		<key>EF1CF3491B7BD98800253C2B</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 		<key>EF2C3A5B1EAA73690071AA93</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 	</dict>
 </dict>
