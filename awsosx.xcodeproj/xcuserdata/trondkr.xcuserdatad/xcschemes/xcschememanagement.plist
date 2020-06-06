@@ -12,7 +12,7 @@
 		<key>awsosxTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<true />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
@@ -22,17 +22,17 @@
 		<key>EF1CF33E1B7BD98800253C2B</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>EF1CF3491B7BD98800253C2B</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>EF2C3A5B1EAA73690071AA93</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 	</dict>
 </dict>

@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane mac build
 ```
 
+### mac test
+```
+fastlane mac test
+```
+
 
 ----
 

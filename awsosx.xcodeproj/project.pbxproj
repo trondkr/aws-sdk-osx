@@ -210,12 +210,6 @@
 		EFD704A420C17377008B21C7 /* AWSFMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD7049620C17377008B21C7 /* AWSFMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFD704A520C17377008B21C7 /* AWSFMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD7049720C17377008B21C7 /* AWSFMResultSet.m */; };
 		EFD704A620C17377008B21C7 /* AWSFMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD7049820C17377008B21C7 /* AWSFMDatabasePool.m */; };
-		EFDAB3752017798A001DE93E /* SDTransferManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB36F20177989001DE93E /* SDTransferManagerTest.m */; };
-		EFDAB3762017798A001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37020177989001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m */; };
-		EFDAB3772017798A001DE93E /* SDTransferUtillityAccelerationOneBigfile.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37120177989001DE93E /* SDTransferUtillityAccelerationOneBigfile.m */; };
-		EFDAB3782017798A001DE93E /* SDTransferManagerManyFilesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37220177989001DE93E /* SDTransferManagerManyFilesTest.m */; };
-		EFDAB3792017798A001DE93E /* SDTransferUtillityAccelerationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB37320177989001DE93E /* SDTransferUtillityAccelerationTest.m */; };
-		EFDAB37A2017798A001DE93E /* SDTransferManagerOneBigFileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAB3742017798A001DE93E /* SDTransferManagerOneBigFileTest.m */; };
 		EFEC6E8A23414DE50075230D /* AWSCloudWatchResources.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEC6E8223414DE50075230D /* AWSCloudWatchResources.m */; };
 		EFEC6E8B23414DE50075230D /* AWSCloudWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEC6E8323414DE50075230D /* AWSCloudWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFEC6E8D23414DE50075230D /* AWSCloudWatchResources.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEC6E8523414DE50075230D /* AWSCloudWatchResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -482,12 +476,6 @@
 		EFD7049720C17377008B21C7 /* AWSFMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSFMResultSet.m; path = AWSCore/FMDB/AWSFMResultSet.m; sourceTree = SOURCE_ROOT; };
 		EFD7049820C17377008B21C7 /* AWSFMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSFMDatabasePool.m; path = AWSCore/FMDB/AWSFMDatabasePool.m; sourceTree = SOURCE_ROOT; };
 		EFD7049920C17377008B21C7 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.markdown; path = AWSCore/FMDB/README.markdown; sourceTree = SOURCE_ROOT; };
-		EFDAB36F20177989001DE93E /* SDTransferManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferManagerTest.m; path = awsosxTests/SDTransferManagerTest.m; sourceTree = "<group>"; };
-		EFDAB37020177989001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferUtillityAccelerationManyFilesTest.m; path = awsosxTests/SDTransferUtillityAccelerationManyFilesTest.m; sourceTree = "<group>"; };
-		EFDAB37120177989001DE93E /* SDTransferUtillityAccelerationOneBigfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferUtillityAccelerationOneBigfile.m; path = awsosxTests/SDTransferUtillityAccelerationOneBigfile.m; sourceTree = "<group>"; };
-		EFDAB37220177989001DE93E /* SDTransferManagerManyFilesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferManagerManyFilesTest.m; path = awsosxTests/SDTransferManagerManyFilesTest.m; sourceTree = "<group>"; };
-		EFDAB37320177989001DE93E /* SDTransferUtillityAccelerationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferUtillityAccelerationTest.m; path = awsosxTests/SDTransferUtillityAccelerationTest.m; sourceTree = "<group>"; };
-		EFDAB3742017798A001DE93E /* SDTransferManagerOneBigFileTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTransferManagerOneBigFileTest.m; path = awsosxTests/SDTransferManagerOneBigFileTest.m; sourceTree = "<group>"; };
 		EFEC6E8223414DE50075230D /* AWSCloudWatchResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSCloudWatchResources.m; path = AWSCloudWatch/AWSCloudWatchResources.m; sourceTree = "<group>"; };
 		EFEC6E8323414DE50075230D /* AWSCloudWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCloudWatch.h; path = AWSCloudWatch/AWSCloudWatch.h; sourceTree = "<group>"; };
 		EFEC6E8523414DE50075230D /* AWSCloudWatchResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSCloudWatchResources.h; path = AWSCloudWatch/AWSCloudWatchResources.h; sourceTree = "<group>"; };
@@ -937,12 +925,6 @@
 		EF2C3A671EAA73D50071AA93 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				EFDAB37220177989001DE93E /* SDTransferManagerManyFilesTest.m */,
-				EFDAB3742017798A001DE93E /* SDTransferManagerOneBigFileTest.m */,
-				EFDAB36F20177989001DE93E /* SDTransferManagerTest.m */,
-				EFDAB37020177989001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m */,
-				EFDAB37120177989001DE93E /* SDTransferUtillityAccelerationOneBigfile.m */,
-				EFDAB37320177989001DE93E /* SDTransferUtillityAccelerationTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -1434,12 +1416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDAB3772017798A001DE93E /* SDTransferUtillityAccelerationOneBigfile.m in Sources */,
-				EFDAB3752017798A001DE93E /* SDTransferManagerTest.m in Sources */,
-				EFDAB3782017798A001DE93E /* SDTransferManagerManyFilesTest.m in Sources */,
-				EFDAB3762017798A001DE93E /* SDTransferUtillityAccelerationManyFilesTest.m in Sources */,
-				EFDAB37A2017798A001DE93E /* SDTransferManagerOneBigFileTest.m in Sources */,
-				EFDAB3792017798A001DE93E /* SDTransferUtillityAccelerationTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1630,7 +1606,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = awsosxTests/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trond.awsosxTests.awsosxTests;
@@ -1648,7 +1624,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = awsosxTests/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trond.awsosxTests.awsosxTests;
@@ -1746,7 +1722,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = awsosxTests/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trond.awsosxTests.awsosxTests;
